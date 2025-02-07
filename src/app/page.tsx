@@ -9,6 +9,8 @@ import { AboutUs } from "./components/AboutUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { BoxCandy } from "./components/BoxCandy";
+import {Clients} from "../../src/app/components/Clients"
+
 export default function Home() {
   return (
     <div>
@@ -127,13 +129,13 @@ export default function Home() {
           />
         </div>
 
-        <Title title="Eventos " />
 
         <Title title="Sobre&nbsp;nós" />
         <AboutUs />
         <Title title="Contato" />
         <Contact />
         <Title title="Nossas&nbsp;clientes" />
+        <Clients/>
         <div className="mb-20"></div>
       </div>
       <Footer />

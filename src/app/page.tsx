@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Title from "./components/Title";
 import { Candy } from "./components/Candy";
-import image from "./img/doces.png";
+import image from "./img/doces4.png";
 import { CarouselImage } from "./components/CarouselImage";
 import Cakes from "./components/Cakes";
 import Image from "next/image";
@@ -9,15 +9,14 @@ import { AboutUs } from "./components/AboutUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { BoxCandy } from "./components/BoxCandy";
-import {Clients} from "../../src/app/components/Clients"
-
+import { Clients } from "./components/Clients";
 export default function Home() {
   return (
     <div>
       <Header />
       <div className="h-full w-full">
-        <div className="py-28 justify-center gap-28 flex flex-row ">
-          <div className="flex flex-col max-w-lg items-center justify-center gap-24">
+        <div className="h-screen justify-center gap-28 flex flex-row ">
+          <div className="flex flex-col max-w-lg  justify-center gap-24">
             <p className="font-title text-7xl text-[#8B4513]">
               Doces artesanais com amor
             </p>
@@ -31,7 +30,13 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <Image src={image} alt="doces" width={500} height={500} />
+            <Image
+              src={image}
+              alt="doces"
+              width={450}
+              height={450}
+              className="rounded-xl"
+            />
           </div>
         </div>
         <Title title="Produtos" />
@@ -129,14 +134,16 @@ export default function Home() {
           />
         </div>
 
-
         <Title title="Sobre&nbsp;nós" />
         <AboutUs />
         <Title title="Contato" />
         <Contact />
         <Title title="Nossas&nbsp;clientes" />
-        <Clients/>
+        <Clients />
         <div className="mb-20"></div>
+        <div className="mb-20">
+          <Clients />
+        </div>
       </div>
       <Footer />
     </div>

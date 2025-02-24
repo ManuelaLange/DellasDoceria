@@ -37,11 +37,11 @@ export function Clients() {
           align: "start",
         }}
         setApi={setApi}
-        className="w-full flex flex-row justify-center items-center mt-10 px-20"
+        className="w-full flex flex-row justify-center items-center mt-10 px-52"
       >
-        <CarouselContent>
+        <CarouselContent className="">
           {feedbackImg.map((feedback, index) => (
-            <CarouselItem key={index} className="lg:basis-1/3 max-h-64">
+            <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3">
               <Card className="w-80 p-3">
                 <CardContent className="flex items-center justify-center">
                   <Image

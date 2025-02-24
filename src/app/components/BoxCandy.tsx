@@ -1,4 +1,4 @@
-import doces9 from "../img/doce9.png";
+import CaixadeDocinho from "../img/Caixadedocinhos.png";
 
 export function BoxCandy() {
   return (
@@ -7,7 +7,7 @@ export function BoxCandy() {
       <div
         className="absolute inset-0 w-3/5 h-full mx-auto "
         style={{
-          backgroundImage: `url(${doces9.src})`,
+          backgroundImage: `url(${CaixadeDocinho.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           filter: "brightness(0.9)",
@@ -18,7 +18,7 @@ export function BoxCandy() {
       <div className="relative z-10 flex items-center justify-end h-full px-20">
         <div className="bg-white/90 rounded-lg p-8 max-w-md shadow-lg">
           <h2 className="font-title text-[#8B4513] text-3xl mb-4">
-            Caixa de doces
+            Caixinha de doces
           </h2>
           <p className="font-text text-gray-700 mb-4">
             Um novo conceito de doces para tornar seu momento único.
@@ -34,8 +34,8 @@ export function BoxCandy() {
                 Doces tradicionais
               </span>
               <div className="flex flex-row gap-10">
-                <span className="font-title text-[#8B4513]">R$ 18</span>
-                <span className="font-title text-[#8B4513]">R$ 25</span>
+                <span className="font-title text-[#8B4513]">R$ 15</span>
+                <span className="font-title text-[#8B4513]">R$ 22</span>
               </div>
             </div>
             <div className="flex flex-row items-center justify-between">

@@ -5,9 +5,9 @@ import foto1 from "../img/foto1.png";
 
 export function AboutUs() {
   return (
-    <div className="flex flex-row px-20 gap-10 justify-center my-10">
-      <div className="grid grid-cols-2 gap-2">
-        <div className="flex flex-col gap-2 min-w-min">
+    <div className="flex flex-col md:flex-row px-4 md:px-20 gap-6 md:gap-10 justify-center my-10">
+      <div className="grid grid-cols-2 gap-2 max-w-full">
+        <div className="flex flex-col gap-2">
           <Image
             src={foto1}
             alt="About us"
@@ -20,16 +20,16 @@ export function AboutUs() {
             alt="About us"
             width={260}
             height={180}
-            className="rounded-lg object-cover"
+            className="rounded-lg object-cover  "
           />
         </div>
-        <div className="flex flex-col gap-2 min-w-min">
+        <div className="flex flex-col gap-2">
           <Image
             src={aboutus3}
             alt="About us"
             width={260}
             height={180}
-            className="rounded-lg object-cover"
+            className="rounded-lg object-cover "
           />
           <Image
             src={foto1}
@@ -41,9 +41,9 @@ export function AboutUs() {
         </div>
       </div>
       <div className="max-w-lg flex items-center">
-        <p className=" font-text m-0 p-2 text-[#8B4513] font-semibold items-center">
+        <p className="font-text m-0 p-2 text-[#8B4513] font-semibold items-center text-sm md:text-base">
           Somos Dani e Thais fundadores da{" "}
-          <span className="font-title text-[28px] text-[#FF7F50]">
+          <span className="font-title text-[22px] md:text-[28px] text-[#FF7F50]">
             Dellas doceria
           </span>
           .<br />

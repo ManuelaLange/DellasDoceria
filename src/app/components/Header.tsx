@@ -1,4 +1,16 @@
+"use client";
 import Image from "next/image";
+import { GiCupcake } from "react-icons/gi";
+import { IoIosArrowDown } from "react-icons/io";
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
@@ -10,20 +22,96 @@ export default function Header() {
 
       {/* Navigation */}
       <nav>
-        <ul className="flex gap-11 text-white">
-          <li className="cursor-pointer hover: font-text font-semibold">
-            Produtos
-          </li>
+        <ul className="flex gap-11 text-white items-center">
+          <DropdownMenu modal={false}>
+            <DropdownMenuTrigger asChild>
+              <Button className="bg-transparent border-none cursor-pointer font-text font-semibold text-base">
+                Produtos <IoIosArrowDown className="text-white text-xl" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56 bg-white text-[#8B4513] font-text">
+              <DropdownMenuLabel className="text-[#8B4513]">
+                Produtos
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator className="bg-[#8B4513]" />
+              <DropdownMenuCheckboxItem
+                onClick={() => {
+                  window.location.href = "#docinhos";
+                }}
+                className="focus:bg-[#FF7F50] focus:text-zinc-100"
+              >
+                Docinhos
+              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem
+                onClick={() => {
+                  window.location.href = "#bolos";
+                }}
+                className="focus:bg-[#FF7F50] focus:text-zinc-100"
+              >
+                Bolos
+              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem
+                onClick={() => {
+                  window.location.href = "#bolos-de-pote";
+                }}
+                className="focus:bg-[#FF7F50] focus:text-zinc-100"
+              >
+                Bolos de pote
+              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem
+                onClick={() => {
+                  window.location.href = "#bombom-de-pote";
+                }}
+                className="focus:bg-[#FF7F50] focus:text-zinc-100"
+              >
+                Bombom de pote
+              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem
+                onClick={() => {
+                  window.location.href = "#barra-recheada";
+                }}
+                className="focus:bg-[#FF7F50] focus:text-zinc-100"
+              >
+                Barra recheada
+              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem
+                onClick={() => {
+                  window.location.href = "#datas-comemorativas";
+                }}
+                className="focus:bg-[#FF7F50] focus:text-zinc-100"
+              >
+                Datas comemorativas
+              </DropdownMenuCheckboxItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <GiCupcake className="text-white text-xl" />
 
-          <li className="cursor-pointer hover: font-text font-semibold">
+          <Button
+            onClick={() => {
+              window.location.href = "#sobre-nos";
+            }}
+            className="bg-transparent border-none cursor-pointer font-text font-semibold text-base"
+          >
             Sobre nós
-          </li>
-          <li className="cursor-pointer hover: font-text font-semibold">
+          </Button>
+          <GiCupcake className="text-white text-xl" />
+          <Button
+            onClick={() => {
+              window.location.href = "#contato";
+            }}
+            className="bg-transparent border-none cursor-pointer font-text font-semibold text-base"
+          >
             Contato
-          </li>
-          <li className="cursor-pointer hover: font-text font-semibold">
+          </Button>
+          <GiCupcake className="text-white text-xl" />
+          <Button
+            onClick={() => {
+              window.location.href = "#nossas-clientes";
+            }}
+            className="bg-transparent border-none cursor-pointer font-text font-semibold text-base"
+          >
             Nossas clientes
-          </li>
+          </Button>
         </ul>
       </nav>
     </header>

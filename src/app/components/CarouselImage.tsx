@@ -15,15 +15,13 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 const images = [doce1, doce2, doce3, doce4, doce5, doce6, doce7];
 
 export function CarouselImage() {
   return (
-    <div className="w-full mt-10 px-20">
+    <div className="mt-10 px-4 sm:px-14 md:px-16 lg:px-20 w-full">
       <Carousel
         opts={{
           align: "start",
@@ -34,14 +32,16 @@ export function CarouselImage() {
             delay: 2000,
           }),
         ]}
-        className="w-full flex flex-row justify-center items-center mt-10 px-20"
+        className="w-full flex flex-row justify-center items-center mt-10 px-6 sm:px-6 md:px-10 lg:px-18 "
       >
-        <CarouselPrevious />
         <CarouselContent>
           {images.map((image, index) => (
-            <CarouselItem key={index} className="md:basis-2/3 lg:basis-1/5">
-              <Card className="w-64">
-                <CardContent className="flex aspect-square items-center justify-center">
+            <CarouselItem
+              key={index}
+              className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 pl-1"
+            >
+              <Card className="w-full max-w-[17rem] mx-auto">
+                <CardContent className="flex aspect-square items-center justify-center p-2">
                   <Image
                     alt="Foto do produto"
                     src={image}
@@ -53,8 +53,6 @@ export function CarouselImage() {
             </CarouselItem>
           ))}
         </CarouselContent>
-
-        <CarouselNext />
       </Carousel>
     </div>
   );

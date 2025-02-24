@@ -1,20 +1,18 @@
 import imageDoces from "../img/doces.png";
 import Image from "next/image";
 
-interface CakesProps {
+interface BolodePoteProps {
   name: string;
   description: string;
-  price15: number;
-  price20: number;
+  price: number;
 }
-export default function Cakes({
+export default function BolodePote({
   name,
   description,
-  price15,
-  price20,
-}: CakesProps) {
+  price,
+}: BolodePoteProps) {
   return (
-    <div className="bg-[#ffffff7c] backdrop-blur-sm max-w-sm md:max-w-md h-[550px] p-5 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl flex flex-col items-center gap-5 md:gap-8 border border-[#8B4513]/20">
+    <div className="bg-[#ffffff7c] backdrop-blur-sm max-w-sm md:max-w-md h-[450px] p-5 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl flex flex-col items-center gap-5 md:gap-8 border border-[#8B4513]/20">
       <div className="w-full flex justify-center transform hover:scale-105 transition-transform duration-300">
         <Image
           src={imageDoces}
@@ -34,22 +32,9 @@ export default function Cakes({
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
           <span className="font-text text-[#8B4513] font-semibold">Valor</span>
           <div className="flex flex-row flex-wrap items-center justify-center gap-4">
-            <div className="flex flex-col gap-1 md:gap-2 items-center">
-              <span className="text-[#8B4513] font-semibold font-text text-sm md:text-base">
-                15 cm
-              </span>
-              <span className="font-title text-[#8B4513] text-base md:text-xl">
-                R$ {price15}
-              </span>
-            </div>
-            <div className="flex flex-col gap-1 md:gap-2 items-center">
-              <span className="font-text font-semibold text-[#8B4513] text-sm md:text-base">
-                20 cm
-              </span>
-              <span className="font-title text-[#8B4513] text-base md:text-xl">
-                R$ {price20}
-              </span>
-            </div>
+            <span className="font-title text-[#8B4513] text-base md:text-xl">
+              R${price}
+            </span>
           </div>
         </div>
       </div>
